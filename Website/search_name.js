@@ -19,6 +19,8 @@ fetch('Data/players.json')
             } else {
                 // Player not found
                 document.getElementById('playerData').innerHTML = 'Player not found';
+                document.getElementById('playerStats').innerHTML = '';
+                document.getElementById('totalStats').innerHTML = '';
             }
         }
 
