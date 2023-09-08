@@ -30,6 +30,13 @@ fetch('Data/players.json')
 
         // Function to display player data
         function displayPlayerData(player) {
+            const CheckIfEmpty = document.getElementById('playerName').value;
+            if (CheckIfEmpty.trim() === '') {
+                document.getElementById('playerData').innerHTML = '';
+                document.getElementById('playerStats').innerHTML = '';
+                document.getElementById('totalStats').innerHTML = '';
+                return;
+            }
             const goalkeeper = "GK"
             if (player["Position"] === goalkeeper) {
                 const playerDataDiv = document.getElementById('playerData');
