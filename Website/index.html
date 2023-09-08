@@ -9,8 +9,10 @@
     <h1>Search for DLS players!</h1>
     <input type="text" id="playerName" placeholder="Enter player name">
     <button onclick="searchPlayer()">Search</button>
-    <button onclick="nextPlayer()">Next</button>
-    <button onclick="prevPlayer()">Previous</button>
+    <div id="player_controls" style="display: none">
+        <button onclick="nextPlayer()">Next</button>
+        <button onclick="prevPlayer()">Previous</button>
+    </div>
     <div id="playerData"></div>
     <div id="playerStats"></div>
     <div id="totalStats"></div>

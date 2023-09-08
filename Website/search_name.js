@@ -18,7 +18,8 @@ fetch('Data/players.json')
             if (matchingPlayers.length > 0) {
                 currentIndex = 0;
                 displayPlayerData(matchingPlayers[currentIndex]);
-            } else {
+            }
+            else {
                 // Player not found
                 document.getElementById('playerData').innerHTML = 'Player not found';
                 document.getElementById('playerStats').innerHTML = '';
@@ -83,6 +84,20 @@ fetch('Data/players.json')
                 totalStatsDiv.innerHTML = `
                     <p>Total Stats: ${player["Total Stats"]}</p>
                 `
+            }
+            if (matchingPlayers.length <= 1) {
+                document.getElementById('player_controls').style.display = 'none';
+            } 
+            else if (matchingPlayers.length === 0) {
+                // Player not found
+                document.getElementById('playerData').innerHTML = 'Player not found';
+                document.getElementById('playerStats').innerHTML = '';
+                document.getElementById('totalStats').innerHTML = '';
+                currentIndex = -1;
+                document.getElementById('player_controls').style.display = 'none';
+            }
+            else {
+                document.getElementById('player_controls').style.display = 'block';
             }
         }
 
