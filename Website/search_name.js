@@ -4,23 +4,26 @@ fetch('Data/players.json')
     .then(data => {
         // Store the JSON data in a variable for later use
         const playersData = data;
+        let matchingPlayers = [];
+        let currentIndex = -1;
 
         // Function to search for a player and display their data
         function searchPlayer() {
             const playerName = document.getElementById('playerName').value;
-            const player = playersData.find(player => 
+            matchingPlayers = playersData.filter(player => 
                 player["First Name"].toLowerCase() === playerName.toLowerCase() ||
                 player["Last Name"].toLowerCase() === playerName.toLowerCase()
             );
 
-            if (player) {
-                // Display the player's data
-                displayPlayerData(player);
+            if (matchingPlayers.length > 0) {
+                currentIndex = 0;
+                displayPlayerData(matchingPlayers[currentIndex]);
             } else {
                 // Player not found
                 document.getElementById('playerData').innerHTML = 'Player not found';
                 document.getElementById('playerStats').innerHTML = '';
                 document.getElementById('totalStats').innerHTML = '';
+                currentIndex = -1;
             }
         }
 
@@ -38,8 +41,6 @@ fetch('Data/players.json')
                     <p>Position: ${player["Position"]}</p>
                     <p>Nationality: ${player["Nationality"]}</p>
                     <p>Club: ${player["Club"]}</p>
-                    
-                    
                 `;
                 playerStatsDiv.innerHTML = `
                     <p>Handling (Gk): ${player["Handling (GK)"]}</p>
@@ -67,8 +68,6 @@ fetch('Data/players.json')
                     <p>Position: ${player["Position"]}</p>
                     <p>Nationality: ${player["Nationality"]}</p>
                     <p>Club: ${player["Club"]}</p>
-                    
-                    
                 `;
                 playerStatsDiv.innerHTML = `
                     <p>Height (cm): ${player["Height (cm)"]}</p>
@@ -85,10 +84,27 @@ fetch('Data/players.json')
                     <p>Total Stats: ${player["Total Stats"]}</p>
                 `
             }
-            
         }
 
-        // Expose the searchPlayer function globally so that the button can call it
+        // Function to display the next player
+        function nextPlayer() {
+            if (matchingPlayers.length > 0 && currentIndex < matchingPlayers.length - 1) {
+                currentIndex++;
+                displayPlayerData(matchingPlayers[currentIndex]);
+            }
+        }
+
+        // Function to display the previous player
+        function prevPlayer() {
+            if (matchingPlayers.length > 0 && currentIndex > 0) {
+                currentIndex--;
+                displayPlayerData(matchingPlayers[currentIndex]);
+            }
+        }
+
+        // Expose the searchPlayer, nextPlayer, and prevPlayer functions globally
         window.searchPlayer = searchPlayer;
+        window.nextPlayer = nextPlayer;
+        window.prevPlayer = prevPlayer;
     })
     .catch(error => console.error(error));
