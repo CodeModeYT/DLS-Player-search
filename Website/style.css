@@ -8,14 +8,46 @@ body{
     color: whitesmoke;
 }
 
+.SearchControl {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.TotalPlayerData {
+    margin-top: 10px;
+}
 .Results {
     line-height: 50%;
+}
+.ResultsNextTo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    gap: 5px;
+}
+.Below {
+    flex-direction: column;
+}
+.playerStats {
+    margin-top: 50px;
+}
+.playerData {
+    margin-top: 50px;
+}
+.GKStats {
+    font-weight: bold;
+    margin-top: 50px;
 }
 .playerName {
     font-weight: bold;
 }
 .totalStats {
     font-weight: bold;
+}
+
+hr.playerStats{
+    color: white;
+    border-radius: 5px;
+    margin: auto 1700px;
+    margin-left: 0;
 }
 
 @keyframes gradient {

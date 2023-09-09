@@ -45,6 +45,7 @@ fetch('Data/players.json')
                 const playerDataDiv = document.getElementById('playerData');
                 const playerStatsDiv = document.getElementById('playerStats');
                 const totalStatsDiv = document.getElementById('totalStats');
+                const GKSTatsDiv = document.getElementById('GKStats')
                 playerNameDiv.innerHTML = `
                     <h2>${player["First Name"]} ${player["Last Name"]}</h2>
                     <br>
@@ -55,11 +56,16 @@ fetch('Data/players.json')
                     <p>Position: ${player["Position"]}</p>
                     <p>Nationality: ${player["Nationality"]}</p>
                     <p>Club: ${player["Club"]}</p>
+                    
                 `;
-                playerStatsDiv.innerHTML = `
+                GKSTatsDiv.style.display = 'block'
+                GKSTatsDiv.innerHTML = `
                     <p>Handling (Gk): ${player["Handling (GK)"]}</p>
                     <p>Reactions (Gk): ${player["Reactions (GK)"]}</p>
                     <p>Height (cm): ${player["Height (cm)"]}</p>
+                    
+                `
+                playerStatsDiv.innerHTML = `
                     <p>Speed: ${player["Speed"]}</p>
                     <p>Acceleration: ${player["Acceleration"]}</p>
                     <p>Control: ${player["Control"]}</p>
@@ -68,7 +74,6 @@ fetch('Data/players.json')
                     <p>Passing: ${player["Passing"]}</p>
                 `;
                 totalStatsDiv.innerHTML = `
-                    <p>Total Stats: ${player["Total Stats"]}</p>
                 `
             }
             else {
@@ -76,6 +81,7 @@ fetch('Data/players.json')
                 const playerDataDiv = document.getElementById('playerData');
                 const playerStatsDiv = document.getElementById('playerStats');
                 const totalStatsDiv = document.getElementById('totalStats');
+                const GKSTatsDiv = document.getElementById('GKStats')
                 playerNameDiv.innerHTML = `
                     <h2>${player["First Name"]} ${player["Last Name"]}</h2>
                     <br>
@@ -86,6 +92,7 @@ fetch('Data/players.json')
                     <p>Position: ${player["Position"]}</p>
                     <p>Nationality: ${player["Nationality"]}</p>
                     <p>Club: ${player["Club"]}</p>
+                    
                 `;
                 playerStatsDiv.innerHTML = `
                     <p>Height (cm): ${player["Height (cm)"]}</p>
@@ -101,6 +108,7 @@ fetch('Data/players.json')
                 totalStatsDiv.innerHTML = `
                     <p>Total Stats: ${player["Total Stats"]}</p>
                 `
+                GKSTatsDiv.style.display = 'none'
             }
             //Toggle player control buttons
             if (matchingPlayers.length <= 1) {
