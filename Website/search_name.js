@@ -1,4 +1,3 @@
-// Load the JSON data (replace 'data.json' with the actual path to your JSON file)
 fetch('Data/players.json')
     .then(response => response.json())
     .then(data => {
@@ -37,6 +36,7 @@ fetch('Data/players.json')
                 document.getElementById('totalStats').innerHTML = '';
                 return;
             }
+            //If player is a goalkeeper --> Change the displayed values
             const goalkeeper = "GK"
             if (player["Position"] === goalkeeper) {
                 const playerDataDiv = document.getElementById('playerData');
@@ -92,6 +92,7 @@ fetch('Data/players.json')
                     <p>Total Stats: ${player["Total Stats"]}</p>
                 `
             }
+            //Toggle player control buttons
             if (matchingPlayers.length <= 1) {
                 document.getElementById('player_controls').style.display = 'none';
             } 
