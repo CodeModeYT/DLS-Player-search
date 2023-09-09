@@ -3,19 +3,24 @@
 <head>
     <title>DLS player search</title>
     <link rel="stylesheet" href="style.css">
-    <script src="search_name.js"></script>
+    <script src="/Website/src/search_name.js"></script>
 </head>
 <body>
     <h1>Search for DLS players!</h1>
-    <input type="text" id="playerName" placeholder="Enter player name">
-    <button onclick="searchPlayer()">Search</button>
-    <div id="player_controls" style="display: none">
-        <button onclick="nextPlayer()">Next</button>
-        <button onclick="prevPlayer()">Previous</button>
+    <div class="SearchControl">
+        <input type="text" id="playerName" placeholder="Enter player name">
+        <button onclick="searchPlayer()">Search</button>
+        <div id="player_controls" style="display: none">
+            <button onclick="nextPlayer()">Next</button>
+            <button onclick="prevPlayer()">Previous</button>
+        </div>
     </div>
-    <div id="playerData"></div>
-    <div id="playerStats"></div>
-    <div id="totalStats"></div>
+    <div class="Results">
+        <div id="playerDisplayName" class="playerDisplayName"></div>
+        <div id="playerData"></div>
+        <div id="playerStats"></div>
+        <div id="totalStats" class="totalStats"></div>
+    </div>
 </body>
 </html>
 

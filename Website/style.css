@@ -7,6 +7,17 @@ body{
     font-family: Jost;
     color: whitesmoke;
 }
+
+.Results {
+    line-height: 50%;
+}
+.playerName {
+    font-weight: bold;
+}
+.totalStats {
+    font-weight: bold;
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;

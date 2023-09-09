@@ -21,8 +21,8 @@ fetch('Data/players.json')
             else {
                 // Player not found
                 document.getElementById('playerData').innerHTML = 'Player not found';
-                document.getElementById('playerStats').innerHTML = '';
-                document.getElementById('totalStats').innerHTML = '';
+                document.getElementById('playerStats').style.display = 'none';
+                document.getElementById('totalStats').style.display = 'none';
                 currentIndex = -1;
             }
         }
@@ -31,19 +31,25 @@ fetch('Data/players.json')
         function displayPlayerData(player) {
             const CheckIfEmpty = document.getElementById('playerName').value;
             if (CheckIfEmpty.trim() === '') {
-                document.getElementById('playerData').innerHTML = '';
-                document.getElementById('playerStats').innerHTML = '';
-                document.getElementById('totalStats').innerHTML = '';
+                document.getElementById('playerData').style.display = 'none';
+                document.getElementById('playerStats').style.display = 'none';
+                document.getElementById('totalStats').style.display = 'none';
+                document.getElementById('player_controls').style.display = 'none';
+                document.getElementById('playerDisplayName').style.display = 'none';
                 return;
             }
             //If player is a goalkeeper --> Change the displayed values
             const goalkeeper = "GK"
             if (player["Position"] === goalkeeper) {
+                const playerNameDiv = document.getElementById('playerDisplayName');
                 const playerDataDiv = document.getElementById('playerData');
                 const playerStatsDiv = document.getElementById('playerStats');
                 const totalStatsDiv = document.getElementById('totalStats');
-                playerDataDiv.innerHTML = `
+                playerNameDiv.innerHTML = `
                     <h2>${player["First Name"]} ${player["Last Name"]}</h2>
+                    <br>
+                `;
+                playerDataDiv.innerHTML = `
                     <p>Rating: ${player["Rating"]}</p>
                     <p>Price: ${player["Price"]}</p>
                     <p>Position: ${player["Position"]}</p>
@@ -66,11 +72,15 @@ fetch('Data/players.json')
                 `
             }
             else {
+                const playerNameDiv = document.getElementById('playerDisplayName');
                 const playerDataDiv = document.getElementById('playerData');
                 const playerStatsDiv = document.getElementById('playerStats');
                 const totalStatsDiv = document.getElementById('totalStats');
-                playerDataDiv.innerHTML = `
+                playerNameDiv.innerHTML = `
                     <h2>${player["First Name"]} ${player["Last Name"]}</h2>
+                    <br>
+                `;
+                playerDataDiv.innerHTML = `
                     <p>Rating: ${player["Rating"]}</p>
                     <p>Price: ${player["Price"]}</p>
                     <p>Position: ${player["Position"]}</p>
@@ -99,10 +109,12 @@ fetch('Data/players.json')
             else if (matchingPlayers.length === 0) {
                 // Player not found
                 document.getElementById('playerData').innerHTML = 'Player not found';
-                document.getElementById('playerStats').innerHTML = '';
-                document.getElementById('totalStats').innerHTML = '';
-                currentIndex = -1;
+                document.getElementById('playerStats').style.display = 'none';
+                document.getElementById('totalStats').style.display = 'none';
+                document.getElementById('playerDisplayName').style.display = 'none';
                 document.getElementById('player_controls').style.display = 'none';
+                currentIndex = -1;
+                
             }
             else {
                 document.getElementById('player_controls').style.display = 'block';
