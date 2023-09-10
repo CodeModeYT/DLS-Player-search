@@ -1,4 +1,4 @@
-fetch('Data/players.json')
+fetch('Data/json/players.json')
     .then(response => response.json())
     .then(data => {
         // Store the JSON data in a variable for later use
@@ -48,7 +48,7 @@ fetch('Data/players.json')
                 const GKSTatsDiv = document.getElementById('GKStats')
                 playerNameDiv.innerHTML = `
                     <h2>${player["First Name"]} ${player["Last Name"]}</h2>
-                    <br>
+                    <img src="/Data/images/${player["Player ID"]}.png" alt="No picture in database" width=150 height=150>
                 `;
                 playerDataDiv.innerHTML = `
                     <p>Rating: ${player["Rating"]}</p>
@@ -84,7 +84,7 @@ fetch('Data/players.json')
                 const GKSTatsDiv = document.getElementById('GKStats')
                 playerNameDiv.innerHTML = `
                     <h2>${player["First Name"]} ${player["Last Name"]}</h2>
-                    <br>
+                    <img src="/Data/images/${player["Player ID"]}.png" alt="No picture in database" width=150 height=150>
                 `;
                 playerDataDiv.innerHTML = `
                     <p>Rating: ${player["Rating"]}</p>

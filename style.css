@@ -12,6 +12,9 @@ body{
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.playerDisplayName {
+    align-items: center;
+}
 .TotalPlayerData {
     margin-top: 10px;
 }
