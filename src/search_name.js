@@ -84,7 +84,7 @@ fetch('Data/json/players.json')
                 const GKSTatsDiv = document.getElementById('GKStats')
                 playerNameDiv.innerHTML = `
                     <h2>${player["First Name"]} ${player["Last Name"]}</h2>
-                    <img src="/Data/images/${player["Player ID"]}.png" alt="No picture in database" width=150 height=150>
+                    <img src="/Data/images/${player["Player ID"]}.png" alt="No picture in database" width=230 height=230>
                 `;
                 playerDataDiv.innerHTML = `
                     <p>Rating: ${player["Rating"]}</p>

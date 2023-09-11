@@ -53,6 +53,11 @@ hr.playerStats{
     margin-left: 0;
 }
 
+hr.hrborder {
+        border: 2px solid whitesmoke;
+        border-radius: 10px;
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
