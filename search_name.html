@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DLS player search</title>
+    <link rel="stylesheet" href="search_name.css">
+    <link rel="icon" href="Data/system_images/favicon.png">
+    <script src="search_name.js"></script>
+</head>
+<body>
+    <h1>Search for DLS players!</h1>
+    <div class="SearchControl">
+        <input type="text" class="input" id="playerName" placeholder="Enter player name...">
+        <button class="button" style="vertical-align:middle" onclick="searchPlayer()"><span>Search! </span></button>
+    </div>
+    <!--<hr class="hrborder">-->
+    <div class="Results">
+        <div class="ResultsNextTo">
+            <div class="Below">
+                <div id="playerPhoto" class="playerPhoto"></div>
+                <div id="controls_counter" class="controlsCounter"></div>                
+            </div>
+            <div id="playerData" class="playerData"></div>
+            
+            <div class="Below">
+                <div id="playerStats" class="playerStats"></div>
+                <div id="totalStats" class="totalStats"></div>
+            </div>
+            <div id="GKStats" class="GKStats"></div>
+        </div>
+    </div>
+    <div class="PlayerNotFound" id="PlayerNotFound" style="display: none;"></div>
+    <div class="SearchControl">
+        <div id="player_controls" style="display: none" class="playerControls">
+            <button class="ctrlbutton" onclick="prevPlayer()">Previous</button>
+            <button class="ctrlbutton" onclick="nextPlayer()">Next</button>
+        </div>
+    </div>    
+</body>
+</html>

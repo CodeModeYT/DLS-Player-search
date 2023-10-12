@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Jost&display=swap/css?family=Muli&display=swap');
+body{
+    background: linear-gradient(-45deg, #24194F, #0776CC, #02CAEF);
+    background-size: 1000000% 1000000%;
+    animation: gradient 30s ease infinite;
+    height: 50vh;
+    font-family: Jost;
+    color: whitesmoke;
+}
+.header{
+  display: flex;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+ 
+    50% {
+        background-position: 100% 50%;
+    }
+ 
+    100% {
+        background-position: 0% 50%;
+    }
+}

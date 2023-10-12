@@ -2,35 +2,16 @@
 <html lang="en">
 <head>
     <title>DLS player search</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="/src\search_name.js"></script>
+    <link rel="stylesheet" href="index-style.css">
+    <link rel="icon" href="Data/system_images/favicon.png">
 </head>
 <body>
-    <h1>Search for DLS players!</h1>
-    <div class="SearchControl">
-        <input type="text" id="playerName" placeholder="Enter player name">
-        <button onclick="searchPlayer()">Search</button>
-        <div id="player_controls" style="display: none">
-            <button onclick="nextPlayer()">Next</button>
-            <button onclick="prevPlayer()">Previous</button>
-        </div>
+    <div class="header">
+        <img src="Data/system_images/favicon.png" width="100px" height="100px">
+        <h1 style="font-weight: bold;">|</h1>
+        <h1 style="padding-left: 20px;">DLS23 Player Search</h1>
     </div>
-    <div class="Results">
-        <div class="ResultsNextTo">
-            <div class="Below">
-                <div id="playerDisplayName" class="playerDisplayName"></div>
-                <div id="playerPhoto"></div>
-            </div>
-            <div id="playerData" class="playerData"></div>
-            
-            <div class="Below">
-                <div id="playerStats" class="playerStats"></div>
-                <div id="totalStats" class="totalStats"></div>
-            </div>
-            <div id="GKStats" class="GKStats"></div>
-        </div>
-    </div>
-    <hr class="hrborder">
+    <a href="search_name.html">Search by name</a>
+    
 </body>
 </html>
-

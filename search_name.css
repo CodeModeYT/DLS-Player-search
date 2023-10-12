@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Jost&display=swap/css?family=Muli&display=swap');
+body{
+    background: linear-gradient(-45deg, #24194F, #0776CC, #02CAEF);
+    background-size: 1000000% 1000000%;
+    animation: gradient 30s ease infinite;
+    height: 50vh;
+    font-family: Jost;
+    color: whitesmoke;
+}
+
+.SearchControl {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.controlsCounter{
+  margin-left: 100px;
+}
+.playerPhoto {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    height: 100%;
+}
+.TotalPlayerData {
+    margin-top: 10px;
+}
+.Results {
+    line-height: 50%;
+}
+.ResultsNextTo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    gap: 5px;
+}
+.Below {
+    flex-direction: column;
+}
+
+.playerData {
+    align-items: center;
+}
+.GKStats {
+    font-weight: bold;
+}
+.playerName {
+    font-weight: bold;
+}
+.totalStats {
+    font-weight: bold;
+}
+hr.playerStats{
+    color: white;
+    border-radius: 5px;
+    margin: auto 1700px;
+    margin-left: 0;
+}
+hr.hrborder {
+        border: 2px solid whitesmoke;
+        border-radius: 10px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+ 
+    50% {
+        background-position: 100% 50%;
+    }
+ 
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+  .input{
+    width: 350px;
+    border: 2px solid rgb(245, 245, 245);
+    background: transparent;
+    padding: 8px;
+    border-radius: 12px;
+    outline: none;
+    font-size: 15px;
+    color: #fff;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+  
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #fff;
+    font-family: Roboto;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: #fff;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: #fff;
+  }
+  
+  .button {
+    display: inline-block;
+    border: 2px solid rgb(245, 245, 245);
+    border-radius: 12px;
+    background-color: #fffdfd8a;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 8px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .ctrlbutton {
+    display: inline-block;
+    border: 2px solid rgb(245, 245, 245);
+    border-radius: 12px;
+    background-color: #00000000;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 6px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
