@@ -102,7 +102,7 @@ fetch('Data/json/players.json')
 
             try {
                 PlayerPhotoDiv.innerHTML = `
-                    <img src="Data/images/${player["Player ID"]}.png" alt=${AltText} width=220 height=220 
+                    <img src="Data/images/${player["Player ID"]}.png"  alt="${AltText}" width=220 height=220  
                         onerror="setDefaultImage(${player["Rating"]})">
                 `;
             } catch {
