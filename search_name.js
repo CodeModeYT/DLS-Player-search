@@ -1,5 +1,5 @@
 //setting up global variables
-const AltText = ""
+const AltText = "";
 //Setting up global functions
 function setDefaultImage(rating) {
     const PlayerPhotoDiv = document.getElementById('playerPhoto');
@@ -23,7 +23,7 @@ function setDefaultImage(rating) {
 }
 function hidePlayerData() {
     document.getElementById('player_controls').style.display = 'none';
-    document.getElementById('playerData').style.display = 'none'
+    document.getElementById('playerData').style.display = 'none';
     document.getElementById('playerStats').style.display = 'none';
     document.getElementById('totalStats').style.display = 'none';
     document.getElementById('playerPhoto').style.display = 'none';
@@ -32,7 +32,7 @@ function hidePlayerData() {
 }
 function redisplayPlayerData() {
     document.getElementById('player_controls').style.display = 'block';
-    document.getElementById('playerData').style.display = 'block'
+    document.getElementById('playerData').style.display = 'block';
     document.getElementById('playerStats').style.display = 'block';
     document.getElementById('totalStats').style.display = 'block';
     document.getElementById('playerPhoto').style.display = 'block';
@@ -40,15 +40,15 @@ function redisplayPlayerData() {
 }
 
 function setWindowTitlePlayer(playerFullName){
-    document.title = "Searching for: " + playerFullName
+    document.title = "Searching for: " + playerFullName;
 }
 function setWindowTitleError(){
-    document.title = "DLS player search"
+    document.title = "DLS player search";
 }
 function playerNotFound(playerName){
     const divID = PlayerNotFound;
     document.getElementById('PlayerNotFound').style.display = 'block';
-    divID.innerHTML = `<h2>Player not found!</h2><p>Couldn't find a player with the name "${playerName}". Have you made a typo?`
+    divID.innerHTML = `<h2>Player not found!</h2><p>Couldn't find a player with the name "${playerName}". Have you made a typo?`;
 }
 function hideNotFound(){
     document.getElementById('PlayerNotFound').style.display = 'none';
