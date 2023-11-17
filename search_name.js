@@ -48,7 +48,7 @@ function setWindowTitleError(){
 function playerNotFound(playerName){
     const divID = PlayerNotFound;
     document.getElementById('PlayerNotFound').style.display = 'block';
-    divID.innerHTML = `<h2>Player not found!</h2><p>Couldn't find a player with the name "${playerName}". Have you made a typo?`;
+    divID.innerHTML = `<h>Player "${playerName}" not found!</h1><h2>Player Not Found. Did they get red-carded out of the database?</h2>`;
 }
 function hideNotFound(){
     document.getElementById('PlayerNotFound').style.display = 'none';
@@ -59,6 +59,11 @@ function updateControlsCounter(totalPlayers, currentIndex) {
     document.getElementById('player_controls').style.display = 'block';
     document.getElementById(controlsDivID).style.display = 'block';
     document.getElementById(controlsDivID).innerHTML = `<p>${currentPlayer}/${totalPlayers}</p>`;
+}
+function emptyPlayerError(){
+    const divID = PlayerNotFound;
+    document.getElementById('PlayerNotFound').style.display = 'block';
+    divID.innerHTML = `<h1>Please enter a player name!</h1><h2><b>Goalpost Without a Striker:</b> We need a player name to take the shot. Please enter one!</h2>`;
 }
 
 //Fetch player data
@@ -93,7 +98,7 @@ fetch('Data/json/players.json')
             if (CheckIfEmpty.trim() === '') {
                 hidePlayerData();
                 setWindowTitleError();
-                playerNotFound();
+                emptyPlayerError();
                 return;
             }
 
