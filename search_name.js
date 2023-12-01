@@ -48,7 +48,7 @@ function setWindowTitleError(){
 function playerNotFound(playerName){
     const divID = PlayerNotFound;
     document.getElementById('PlayerNotFound').style.display = 'block';
-    divID.innerHTML = `<h>Player "${playerName}" not found!</h1><h2>Player Not Found. Did they get red-carded out of the database?</h2>`;
+    divID.innerHTML = `<h1>Player "${playerName}" not found!</h1><h2>Player Not Found. Did they get red-carded out of the database?</h2>`;
 }
 function hideNotFound(){
     document.getElementById('PlayerNotFound').style.display = 'none';
