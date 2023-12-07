@@ -107,7 +107,7 @@ fetch('Data/json/players.json')
 
             try {
                 PlayerPhotoDiv.innerHTML = `
-                    <img src="Data/images/${player["Player ID"]}.png"  alt="${AltText}" width=220 height=220  
+                    <img src="https://raw.githubusercontent.com/CodeModeYT/DLS-Files/main/Player-Photos/23/${player["Player ID"]}.png"  alt="${AltText}" width=220 height=220  
                         onerror="setDefaultImage(${player["Rating"]})">
                 `;
             } catch {
