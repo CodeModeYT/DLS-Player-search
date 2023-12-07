@@ -2,3 +2,6 @@
     display: flex;
     border-bottom: 2px solid white;
   }
+#header h3{
+  color: rgba(255, 255, 255, 0.432)
+}
