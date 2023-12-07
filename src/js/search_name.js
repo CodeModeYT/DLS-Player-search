@@ -5,19 +5,19 @@ function setDefaultImage(rating) {
     const PlayerPhotoDiv = document.getElementById('playerPhoto');
     if (rating >= 80) {
         PlayerPhotoDiv.innerHTML = `
-            <img src="Data/system_images/legendary.png" alt=${AltText} width=220 height=220>
+            <img src="/DLS-Player-search/Data/system_images/legendary.png" alt="${AltText}" width=220 height=220>
         `;
     } else if (rating >= 70) {
         PlayerPhotoDiv.innerHTML = `
-            <img src="Data/system_images/rare.png" alt=${AltText} width=220 height=220>
+            <img src="/DLS-Player-search/Data/system_images/rare.png" alt="${AltText}" width=220 height=220>
         `;
     } else if (rating < 70) {
         PlayerPhotoDiv.innerHTML = `
-            <img src="Data/system_images/common.png" alt=${AltText} width=220 height=220>
+            <img src="/DLS-Player-search/Data/system_images/common.png" alt="${AltText}" width=220 height=220>
         `;
     } else {
         PlayerPhotoDiv.innerHTML = `
-            <img src="Data/system_images/secret.png" alt=${AltText} width=220 height=220>
+            <img src="/DLS-Player-search/Data/system_images/secret.png" alt="${AltText}" width=220 height=220>
         `;
     }
 }
@@ -67,7 +67,7 @@ function emptyPlayerError(){
 }
 
 //Fetch player data
-fetch('Data/json/players.json')
+fetch('/DLS-Player-search/Data/json/players.json')
     .then(response => response.json())
     //Handling the data
     .then(data => {

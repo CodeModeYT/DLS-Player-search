@@ -11,3 +11,8 @@
     left: 0;
     border-top: 2px solid white;
 }
+a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+}

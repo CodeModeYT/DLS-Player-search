@@ -1,3 +1,3 @@
 $(function(){
-    $("#footer").load("src/template/footer.html");
+    $("#footer").load("/DLS-Player-search/src/template/footer.html");
 });

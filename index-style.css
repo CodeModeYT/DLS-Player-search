@@ -1,16 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Jost&display=swap/css?family=Muli&display=swap');
 body{
-    background-image: url('Data/system_images/bg.png');
+    background-image: url('/DLS-Player-search/Data/system_images/bg24.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     height: 50vh;
     font-family: Jost;
     color: whitesmoke;
-}
-.header{
-  display: flex;
-  border-bottom: 2px solid white;
 }
 a{
     color: whitesmoke;

@@ -3,17 +3,21 @@
 <head>
     <title>DLS player search</title>
     <link rel="stylesheet" href="search_name.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="/DLS-Player-search/src/template/footer.css">
+    <link rel="stylesheet" href="/DLS-Player-search/src/template/header.css">
+    <script src="/DLS-Player-search/src/js/load_footer.js"></script>
+    <script src="/DLS-Player-search/src/js/load_header.js"></script>
     <link rel="icon" href="/DLS-Player-search/Data/system_images/favicon.png">
-    <script src="src/js/search_name.js"></script>
+    <script src="/DLS-Player-search/src/js/search_name.js"></script>
 </head>
-<body>
-    <h1>Search for DLS players!</h1>
+<body onLoad="loadHeader(23)">
+    <div class="header" id="header"></div>
     <div class="SearchControl">
         <input type="text" class="input" id="playerName" placeholder="Enter player name...">
         <button class="button" id="input_button" style="vertical-align:middle" onclick="searchPlayer()"><span>Search! </span></button>
-        <script src="src/js/search_name_enter.js"></script>
+        <script src="/DLS-Player-search/src/js/search_name_enter.js"></script>
     </div>
-    <!--<hr class="hrborder">-->
     <div class="Results">
         <div class="ResultsNextTo">
             <div class="Below">
@@ -35,6 +39,7 @@
             <button class="ctrlbutton" onclick="prevPlayer()">Previous</button>
             <button class="ctrlbutton" onclick="nextPlayer()">Next</button>
         </div>
-    </div>    
+    </div>
+    <div class="footer" id ="footer"></div>   
 </body>
 </html>
