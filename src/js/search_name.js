@@ -75,13 +75,15 @@ fetch('/DLS-Player-search/Data/json/players.json')
         let matchingPlayers = [];
         let currentIndex = -1;
 
+    
         function searchPlayer() {
-            const playerName = document.getElementById('playerName').value;
-            matchingPlayers = playersData.filter(player => 
-                player["First Name"].toLowerCase() === playerName.toLowerCase() ||
-                player["Last Name"].toLowerCase() === playerName.toLowerCase()
-            );
-            //Handling the number of search results
+            const playerName = document.getElementById('playerName').value.trim();
+            matchingPlayers = playersData.filter(player => {
+                const fullName = `${player["First Name"]} ${player["Last Name"]}`.toLowerCase();
+                return fullName.includes(playerName.toLowerCase());
+            });
+        
+            // Handling the number of search results
             if (matchingPlayers.length > 0) {
                 currentIndex = 0;
                 displayPlayerData(matchingPlayers[currentIndex]);
@@ -92,6 +94,7 @@ fetch('/DLS-Player-search/Data/json/players.json')
                 currentIndex = -1;
             }
         }
+        
 
         function displayPlayerData(player) {
             const CheckIfEmpty = document.getElementById('playerName').value;
