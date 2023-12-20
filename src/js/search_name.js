@@ -107,15 +107,20 @@ fetch('/DLS-Player-search/Data/json/players.json')
 
             const goalkeeper = "GK";
             const PlayerPhotoDiv = document.getElementById('playerPhoto');
-
-            try {
-                PlayerPhotoDiv.innerHTML = `
-                    <img src="https://raw.githubusercontent.com/CodeModeYT/DLS-Files/main/Player-Photos/23/${player["Player ID"]}.png"  alt="${AltText}" width=220 height=220  
-                        onerror="setDefaultImage(${player["Rating"]})">
-                `;
-            } catch {
+            if(player["Player ID"] !== ""){
+                try {
+                    PlayerPhotoDiv.innerHTML = `
+                        <img src="https://raw.githubusercontent.com/CodeModeYT/DLS-Files/main/Player-Photos/23/${player["Player ID"]}.png"  alt="${AltText}" width=220 height=220  
+                            onerror="setDefaultImage(${player["Rating"]})">
+                    `;
+                } catch {
+                    setDefaultImage(player["Rating"]);
+                }
+            }
+            else {
                 setDefaultImage(player["Rating"]);
             }
+            
 
             const playerDataDiv = document.getElementById('playerData');
             const playerStatsDiv = document.getElementById('playerStats');
