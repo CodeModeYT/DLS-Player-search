@@ -9,10 +9,20 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/DLS-Player-search/src/js/load_footer.js"></script>
     <script src="/DLS-Player-search/src/js/load_header.js"></script>
+    <script src="/DLS-Player-search/src/js/gameversion_selector.js"></script>
 </head>
-<body onLoad="loadHeader(24, 'Player Search', 'by CodeMode')">
+<body onLoad="loadHeader(24, 'Player Search', 'by CodeMode'); selection_loadDefault()">
     <div class="header" id="header"></div>
-    <h2>Search the entire (unofficial) player database of Dream League Soccer!</h2>
+    <div class="hero">
+        <h1 class="herotxt">Please select a game version to get started.</h1>
+    </div>
+      <div class="selector">
+          <select class="version_select" id="version_select" selected="0">
+            <option value="0">Select game version:</option>
+            <option value="1" onclick="location.href = `/DLS-Player-search/DLS23/search_name.html`;">DLS 23</option>
+            <option value="2" onclick="location.href = `/DLS-Player-search/DLS24/search_name.html`;">DLS 24</option>
+          </select>
+       </div>
     <div class="footer" id ="footer"></div>
 </body>
 </html>

@@ -67,7 +67,7 @@ function emptyPlayerError(){
 }
 
 //Fetch player data
-fetch('/DLS-Player-search/Data/json/players.json')
+fetch('/DLS-Player-search/Data/json/players_23.json')
     .then(response => response.json())
     //Handling the data
     .then(data => {

@@ -11,6 +11,45 @@
     left: 0;
     border-top: 2px solid white;
 }
+.fbutton {
+    position: relative;
+    border: 2px solid rgba(245, 245, 245, 0);
+    border-radius: 12px;
+    background-color: #fffdfd00;
+    color: #FFFFFF;
+    font-size: 15px;
+    width: 20em;
+    height: 2em;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.fbutton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.fbutton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.fbutton:hover span {
+    padding-right: 25px;
+}
+
+.fbutton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
 a{
     color: whitesmoke;
     text-decoration: none;
