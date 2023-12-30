@@ -60,7 +60,30 @@ hr.hrborder {
         border: 2px solid whitesmoke;
         border-radius: 10px;
 }
-
+.searchSettings {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+}
+.searchFactorSelector {
+  text-align: center;
+  height: 30px; 
+  width: 250px;
+  font-size: 1.1em;
+  background-color: transparent;
+  border: 2px solid whitesmoke;
+  border-radius: 12px;
+  color: whitesmoke;
+  margin-left: 2em;
+}
+.searchFactorSelector option {
+  background-color: rgba(255, 0, 0, 0); 
+  color: rgba(0, 0, 0, 0.685);    
+}
+.searchFactorSelector option:hover {
+  background-color: rgba(245, 245, 245, 0.507);
+  color: #000000bd;
+}
 
   .input{
     width: 350px;

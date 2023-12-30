@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DLS player search</title>
+    <link rel="stylesheet" href="search23.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="/DLS-Player-search/src/template/footer.css">
+    <link rel="stylesheet" href="/DLS-Player-search/src/template/header.css">
+    <script src="/DLS-Player-search/src/js/load_footer.js"></script>
+    <script src="/DLS-Player-search/src/js/load_header.js"></script>
+    <link rel="icon" href="/DLS-Player-search/Data/system_images/favicon.png">
+    <script src="/DLS-Player-search/src/js/search23.js"></script>
+    <script src="/DLS-Player-search/src/js/searchfactor_selector.js"></script>
+</head>
+<body onLoad="loadHeader(23, 'Select search factor', 'DLS Player Search'), selection_loadDefault()">
+    <div class="header" id="header"></div>
+    <div class="searchSettings">
+        <h1>Search settings:</h1>
+        <select class="searchFactorSelector" id="searchFactorSelector" onchange="handleSFChange()">
+            <option value="select">Select search factor:</option>
+            <option value="playerName">Name</option>
+            <option value="playerOverall">Rating (Overall)</option>
+            <option value="playerPrice">Price</option>
+            <option value="playerNationality">Nationality</option>
+            <option value="playerClub">Club</option>
+            <option value="playerPosition">Position (short form)</option>
+            <option value="playerFoot">Foot (L/R/B)</option>
+            <option value="playerHeight">Height (cm)</option>
+            <option value="playerSpeed">Speed</option>
+            <option value="playerAcceleration">Acceleration</option>
+            <option value="playerStamina">Stamina</option>
+            <option value="playerControl">Control</option>
+            <option value="playerStrength">Strength</option>
+            <option value="playerTackling">Tackling</option>
+            <option value="playerPassing">Passing</option>
+            <option value="playerShooting">Shooting</option>
+            <option value="playerHandling">Handling (GK)</option>
+            <option value="playerReactions">Reactions (GK)</option>
+            <option value="playerTotStats">Total Stats</option>
+        </select>   
+    </div>
+    <div class="SearchControl">
+        <input type="text" class="input" id="searchInput" placeholder="Select a search factor">
+        <button class="button" id="input_button" style="vertical-align:middle" onclick="searchPlayer()"><span>Search! </span></button>
+        <script src="/DLS-Player-search/src/js/search_enter.js"></script>
+    </div>
+    <div class="Results">
+        <div class="ResultsNextTo">
+            <div class="Below">
+                <div id="playerPhoto" class="playerPhoto"></div>
+                <div id="controls_counter" class="controlsCounter"></div>                
+            </div>
+            <div id="playerData" class="playerData"></div>
+            
+            <div class="Below">
+                <div id="playerStats" class="playerStats"></div>
+                <div id="totalStats" class="totalStats"></div>
+            </div>
+            <div id="GKStats" class="GKStats"></div>
+        </div>
+    </div>
+    <div class="PlayerNotFound" id="PlayerNotFound" style="display: none;"></div>
+    <div class="PlayerNotFound" id="selectSearchFactorErr" style="display: none;">
+        <h2>Please select a search factor in the dropdown menu first.</h2>
+    </div>
+    <div class="SearchControl">
+        <div id="player_controls" style="display: none" class="playerControls">
+            <button class="ctrlbutton" onclick="prevPlayer()">Previous</button>
+            <button class="ctrlbutton" onclick="nextPlayer()">Next</button>
+        </div>
+    </div>
+    <div class="footer" id ="footer"></div>   
+</body>
+</html>

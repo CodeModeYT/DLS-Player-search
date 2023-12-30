@@ -1,4 +1,4 @@
-var input = document.getElementById('playerName');
+var input = document.getElementById('searchInput');
 
 input.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {

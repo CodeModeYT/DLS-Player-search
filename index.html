@@ -17,10 +17,10 @@
         <h1 class="herotxt">Please select a game version to get started.</h1>
     </div>
       <div class="selector">
-          <select class="version_select" id="version_select" selected="0">
+          <select class="version_select" id="version_select" selected="0" onchange="handleSFChange()">
             <option value="0">Select game version:</option>
-            <option value="1" onclick="location.href = `/DLS-Player-search/DLS23/search_name.html`;">DLS 23</option>
-            <option value="2" onclick="location.href = `/DLS-Player-search/DLS24/search_name.html`;">DLS 24</option>
+            <option value="1">DLS 23</option>
+            <option value="2">DLS 24</option>
           </select>
        </div>
     <div class="footer" id ="footer"></div>
