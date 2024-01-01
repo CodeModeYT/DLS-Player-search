@@ -29,30 +29,44 @@ a{
 .hero {
     text-align: center;
 }
-.selector {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.version_select {
-    text-align: center;
-    height: 35px; 
-    width: 500px;
-    font-size: 1.2em;
-    background-color: transparent;
-    border: 2px solid whitesmoke;
+.bbutton {
+    display: inline-block;
+    border: 2px solid rgb(245, 245, 245);
     border-radius: 12px;
-    color: whitesmoke;
-}
-.version_select option {
-    background-color: rgba(255, 0, 0, 0); 
-    color: rgba(0, 0, 0, 0.685);    
-}
-.version_select option:hover {
-    background-color: rgba(245, 245, 245, 0.507);
-    color: #000000bd;
-}
-
+    background-color: #fffdfd8a;
+    color: #00000098;
+    text-align: center;
+    font-size: 15px;
+    padding: 8px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .bbutton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .bbutton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .bbutton:hover span {
+    padding-right: 25px;
+  }
+  
+  .bbutton:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 @keyframes shine {
     to {
         background-position: 200% center;

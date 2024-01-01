@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>DLS player search</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="coming-soon.css">
     <link rel="stylesheet" href="/DLS-Player-search/src/template/footer.css">
     <link rel="stylesheet" href="/DLS-Player-search/src/template/header.css">
     <link rel="icon" href="/DLS-Player-search/Data/system_images/favicon.png">
@@ -11,21 +11,25 @@
     <script src="/DLS-Player-search/src/js/load_footer.js"></script>
     <script src="/DLS-Player-search/src/js/load_header.js"></script>
     <script src="/DLS-Player-search/src/js/gameversion_selector.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
 </head>
 <body onLoad="loadHeader(24, 'Player Search', 'by CodeMode'); selection_loadDefault()">
     <div class="header" id="header"></div>
     <div class="hero">
-        <h2>Welcome to the DLS Player Search!</h2>
-        <h3>This website allows you to search through the unofficial player database of Dream League Soccer, a soccer game by FirstTouchGames.</h3>
-        <h1 class="herotxt">Please select a game version to get started.</h1>
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        <lord-icon
+            src="https://cdn.lordicon.com/ipbtscff.json"
+            trigger="loop"
+            delay="2000"
+            stroke="bold"
+            colors="primary:#9c1fc9,secondary:#6755d9"
+            style="width:200px;height:200px">
+        </lord-icon>
+        <h1 class="herotxt">Coming soon!</h1>
+        <h2>The database for Dream League Soccer 2024 is still in development and not finished yet.</h2>
+        <h2>Check back soon for updates!</h2>
+        <button class="bbutton" style="vertical-align:middle" onclick="history.back()"><span>Go back to previous page! </span></button>
     </div>
-      <div class="selector">
-          <select class="version_select" id="version_select" selected="0" onchange="handleSFChange()">
-            <option value="0">Select game version:</option>
-            <option value="1">DLS 23</option>
-            <option value="2">DLS 24</option>
-          </select>
-       </div>
     <div class="footer" id ="footer"></div>
 </body>
 </html>

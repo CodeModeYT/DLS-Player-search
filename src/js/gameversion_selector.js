@@ -9,6 +9,6 @@ function handleSFChange() {
         location.href = `/DLS-Player-search/DLS23/search23.html`;
     }
     if (selectedValue == "2"){
-        location.href = `/DLS-Player-search/DLS23/search24.html`;
+        location.href = `/DLS-Player-search/Other/coming-soon.html`;
     }
 }

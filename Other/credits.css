@@ -13,9 +13,11 @@ a{
     text-decoration: none;
     font-weight: bold;
 }
-.herotxt {
-    text-align: center;
-    font-size: 3em;
+.header {
+    margin-bottom: 0;
+}
+.heading {
+    font-size: 2em;
     font-weight: bold;
     background: linear-gradient(to left, #9c1fc9 10%, #dd11a1 20%,  #9c1fc9 40%,  #6755d9 60%,  #25c3f9 80%, #6755d9 90%);
     background-size: 200% auto;
@@ -26,33 +28,35 @@ a{
     -webkit-text-fill-color: transparent;
     animation: shine 5s linear infinite;
 }
-.hero {
+.blurred {
+    margin-top: 0;
+    background-color: rgba(0, 0, 0, 0.151);    
+    backdrop-filter: blur(5px);
+}
+.credits {
     text-align: center;
 }
-.selector {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.version_select {
+.copyright {
     text-align: center;
-    height: 35px; 
-    width: 500px;
-    font-size: 1.2em;
-    background-color: transparent;
-    border: 2px solid whitesmoke;
-    border-radius: 12px;
-    color: whitesmoke;
 }
-.version_select option {
-    background-color: rgba(255, 0, 0, 0); 
-    color: rgba(0, 0, 0, 0.685);    
+.copyright p {
+    margin: 0;
 }
-.version_select option:hover {
-    background-color: rgba(245, 245, 245, 0.507);
-    color: #000000bd;
+.links {
+    text-align: center;
 }
-
+.links p{
+    margin: 0;
+}
+.link {
+    font-size: 0.9em;
+}
+.contact {
+    text-align: center;
+}
+.contact p {
+    margin: 0;
+}
 @keyframes shine {
     to {
         background-position: 200% center;
