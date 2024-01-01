@@ -105,7 +105,7 @@ fetch('/DLS-Player-search/Data/json/players_23.json')
                 if (isNaN(ratingInput)) {
                     hidePlayerData();
                     setWindowTitleError();
-                    emptyPlayerError("with an overall rating of");
+                    emptyPlayerError("rating");
                     return;
                 }
                 matchingPlayers = playersData.filter(player => {
