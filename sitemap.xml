@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://codemodeyt.github.io/DLS-Player-search/</loc>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://codemodeyt.github.io/DLS-Player-search/DLS23/search23.html</loc>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://codemodeyt.github.io/DLS-Player-search/Other/credits.html</loc>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://codemodeyt.github.io/DLS-Player-search/Other/coming-soon.html</loc>
+      <priority>0.1</priority>
+   </url>
+</urlset>
