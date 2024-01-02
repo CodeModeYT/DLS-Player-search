@@ -5,6 +5,15 @@
 
 --
 
-Live preview: https://codemodeyt.github.io/DLS-Player-search/
+Hosted on: https://codemodeyt.github.io/DLS-Player-search/,
+
 Using: https://github.com/theshinramen/DLS-Files
+
+--
+
+### Copyright notice:
+Copyright 2024 CodeMode
+
+All rights reserved. This software and its source code are proprietary and confidential. Unauthorized use, reproduction, or distribution of this software or any portion of it is prohibited.
+All rights not explicitly granted are reserved.
 
